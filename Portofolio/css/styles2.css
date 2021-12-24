@@ -1,0 +1,1076 @@
+        /* ========================*/
+        /*= met custom properties =*/
+        /* ========================*/
+:root{
+    /* font */
+    --hoofd-font: Arial, Helvetica, sans-serif ;
+    --hover-font-color: white;
+
+    /* home page */
+    --hoofd-color-home: rgb(110, 225, 225);
+    --secondary-color-home: rgb(110, 225, 225, 0.3);
+
+    /* work page  */
+    --hoofd-color-works: rgb(255, 222, 161);
+    --secondary-color-works: rgb(255, 222, 161, 0.3);
+
+    /* kunstsite page  */
+    --hoofd-color-kunstsite: rgba(255, 102, 178);
+    --secondary-color-kunstsite: rgb(255, 153, 204, 0.3);
+
+    /* simpele spel page  */
+    --hoofd-color-simpelespel: rgba(186,85,211);
+    --secondary-color-simpelespel: rgb(238,130,238, 0.3);
+
+    /* prototype page  */
+    --hoofd-color-prototype: rgba(0,204,102);
+    --secondary-color-prototype: rgb(102,255,178, 0.3);
+
+    /* UX disign */
+    --hoofd-color-uxdesign: rgba(166,124,82);
+    --secondary-color-uxdesign: rgb(160,82,45, 0.3);
+
+    /* about page */
+    --hoofd-color-about: rgba(255,215,0);
+    --secondary-color-about: rgb(255,255,0, 0.3);
+}
+
+
+
+
+        /* =========================*/
+        /* === Algemene stijlen  ===*/
+        /* =========================*/
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+            /* page name */
+header h1{
+    font-family: var(--hoofd-font) ;
+    color: white;
+    font-size: 5cm ;
+    
+    margin: 0;
+    background-color: var(--hoofd-color-home);
+    width: 174px;
+    height:100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+
+    letter-spacing: 1cm;
+    writing-mode: vertical-lr;
+    transform: rotate(.5turn);
+    text-indent: .7cm;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+            /* Navigation menu */
+
+header nav{
+    position: fixed;
+    right: 2em;
+    top: 0;
+    height: 50%;
+    width: 3em;
+    background-color: var(--hoofd-color-home);
+    transform: translateY(-90%);
+}
+
+header nav button{
+    font-family: var(--hoofd-font);
+
+    font-size: .8em;
+    font-weight: bold;
+    position: fixed;
+    bottom: -1.9em;
+
+    margin: 0;
+    padding: .4em;
+    border:none;
+
+    text-align: center;
+    text-decoration: none;
+
+    background-color: var(--secondary-color-home);
+    /* background-color: red; */
+}
+
+header nav button:hover{
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-home);
+}
+
+header nav ul{
+    margin: 0;
+    padding: 1em;
+    writing-mode: vertical-lr;
+    transform: rotate(.5turn);
+
+    display: flex; 
+    flex-flow: row;
+    justify-content: space-around;
+
+    height: 100%;
+}
+
+.toonmenu{
+    transform: translateY(0%);
+}
+
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    font-family: var(--hoofd-font) ;
+    text-decoration: none;
+    color: var(--hover-font-color);
+}
+
+header nav ul li a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    /* padding: 5px 3px; */
+    /* border: 2px solid var(--hoofd-color-home); */
+    background-color: var(--hoofd-color-home);
+    color: var(--hover-font-color);
+}
+
+            /* main inhoud */
+main{
+    position: absolute;
+    margin-left: 200px;
+    top: 4cm;
+}
+
+main section{
+    width: 100%;
+    
+    gap: 7em;
+}
+
+main section:nth-of-type(1) img{
+    position: absolute;
+    /* left: 19cm;
+    top: -1cm; */
+    right: -69%;
+    top: 13%;
+    width: 7.5cm;
+    /* grid-column-start: 2; */
+}
+
+main h2{
+    font-family: var(--hoofd-font) ;
+    font-weight: bold;  
+    text-decoration: underline var(--hoofd-color-home);
+    font-size: 50px;
+    grid-column-start: 1;
+}
+
+main section p{
+    font-size: 20px;
+    width: 13cm;
+    line-height: 25px;
+    grid-column-start: 1;
+}
+
+
+            /* background circles */
+.homecircles{
+    /* position: absolute; */
+    /* z-index: -100; */
+    pointer-events: none;
+}
+
+.homecircles .circle1{
+    background-color: var(--secondary-color-home);
+    position: absolute;
+
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+
+    animation-name: flying;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-delay: -2s;
+}
+
+@keyframes flying{
+    0%{ 
+        right: 0%;
+        top: 50%;
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+
+    }
+    100%{
+        right: 50%;
+        top: 0%;
+        opacity: 0%;
+    }
+}
+
+.homecircles .circle2{
+    background-color: var(--secondary-color-home);
+     position: absolute;
+
+    animation-name: flying2;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+@keyframes flying2{
+    0%{ 
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        left: 0%;
+        top: 50%;
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+
+    }
+    100%{
+        width: 20em;
+        height: 20em;
+        border-radius: 20em;
+        left: 50%;
+        top: 0%;
+        opacity: 0%;
+    }
+}
+.homecircles .circle3{
+    background-color: var(--secondary-color-home);
+    position: absolute;
+    right: 15%;
+    top: 13%;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+@keyframes flying3{
+    0%{ 
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        opacity: 0%;
+    }
+    100%{
+        width: 30em;
+        height: 30em;
+        border-radius: 30em;
+        opacity: 100%;
+    }
+}
+
+.homecircles .circle4{
+    background-color: var(--secondary-color-home);
+    position: absolute;
+    left: 15%;
+    top: 45%;
+    animation-name: flying4;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+@keyframes flying4{
+    0%{ 
+        width: 20em;
+        height: 20em;
+        border-radius: 20em;
+        opacity: 0%;
+    }
+    50%{
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        opacity: 100%;
+    }
+    100%{
+        width: 20em;
+        height: 20em;
+        border-radius: 20em;
+        opacity: 0%;
+    }
+}
+
+
+
+
+
+
+        /* ========================*/
+        /*=  WORKS page stijlen   =*/
+        /* ========================*/
+
+    /* header works page  */
+.worksheader h1{
+    background-color: var(--hoofd-color-works);
+    letter-spacing: -.10cm;
+    text-indent: .4cm;
+    grid-column-start: 1;
+}
+
+    /* Navigation menu */
+.works header nav ul li a{
+    text-decoration: none;
+    color: var(--hoofd-color-works);
+}
+
+.works header nav ul li a:hover{
+    padding: 5px 3px;
+    border: 2px solid var(--hoofd-color-works);
+}
+
+    /* main inhoud */
+.works main section:nth-of-type(1) img{
+    position: absolute;
+    width: 8cm;
+    top: 1cm;
+}
+
+.works main {
+    margin-top: 0%;
+    top: 4cm;
+}
+
+.works main h2{
+    text-decoration: underline var(--hoofd-color-works);
+    grid-column-start: 1;
+}
+
+.works main nav ul{
+    padding: 2cm 0 0 0;
+    list-style: none;
+    width: 23cm;
+    position: absolute;
+    left: -1.5cm;
+    columns: 2;
+    gap: 5cm;
+}
+
+.works main nav ul li{
+    padding: 20px 0px ;
+    margin: 0 2cm;
+    width: 100%;
+}
+
+.works main nav ul li a{
+    font-family: var(--hoofd-font);
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--hoofd-color-works);
+}
+
+.works main nav ul li a:hover{
+    padding: 5px 20px;
+    border: 2px solid var(--hoofd-color-works);
+    background-color: var(--hoofd-color-works);
+    color: var(--hover-font-color);
+    font-weight: bold;
+}
+
+    /* background circles */
+.workscircles .circle1{
+    background-color: var(--secondary-color-works);
+    position: absolute;
+
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+
+    animation-name: flying;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-delay: -2s;
+}
+
+.workscircles .circle2{
+    background-color: var(--secondary-color-works);
+     position: absolute;
+
+    animation-name: flying2;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+.workscircles .circle3{
+    background-color: var(--secondary-color-works);
+    position: absolute;
+    right: 14%;
+    top: 13%;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.workscircles .circle4{
+    background-color: var(--secondary-color-works);
+    position: absolute;
+    left: 15%;
+    top: 45%;
+    animation-name: flying4;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+
+
+        /* ===================================*/
+        /* ==  WORKS pages algemene stijlen  ==*/
+        /* ==================================*/
+
+        /* ** kunstsite page ** */
+        
+    /* header kunstsite page  */
+.kunstsite header h1{
+    font-size: 3.5cm;
+    letter-spacing: -5px;
+    background-color: var(--hoofd-color-kunstsite);
+    text-indent: .4cm;
+}
+
+.kunstsite header h1 span{
+    padding-right: .37em;
+}
+
+    /* Navigation menu */
+.kunstsite header nav ul li a{
+    color: var(--hoofd-color-kunstsite);
+
+}
+
+.kunstsite header nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-kunstsite);
+    font-weight: bold;
+}
+
+    /* hoofd section kunstsite page  */
+.kunstsite main section h2{
+    text-decoration: underline var(--hoofd-color-kunstsite);
+}
+
+.kunstsite main section:nth-of-type(1) img{
+    position: absolute;
+    left: 18.7cm;
+    top: 1.2cm;
+}
+
+main section:nth-of-type(1) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    color: var(--hoofd-color-kunstsite);
+}
+
+main section:nth-of-type(1) nav a:hover{
+    border: 3px solid var(--hoofd-color-kunstsite);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-kunstsite);
+    padding: 5px 3px;
+}
+
+.kunstsite main h3{
+    font-family: var(--hoofd-font);
+    font-size: 30px;
+    margin-top: 5cm;
+    text-decoration: underline black;
+}
+
+    /* informatie sections kunstsite page  */
+.kunstsite main section:nth-of-type(2) h4,
+.kunstsite main section:nth-of-type(3) h4,
+.kunstsite main section:nth-of-type(4) h4{
+    color: var(--hoofd-color-kunstsite);
+}
+
+main section:nth-of-type(3),
+main section:nth-of-type(4){
+    margin-top: 3cm;
+}
+
+main section:nth-of-type(4){
+    margin-bottom: 3cm;
+}
+
+main section:nth-of-type(2),
+main section:nth-of-type(3),
+main section:nth-of-type(4){
+    /* width: 29cm;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; */
+
+    /* display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2; */
+
+    gap: 7em;
+
+}
+
+/* main section:nth-of-type(2) div,
+main section:nth-of-type(3) div,
+main section:nth-of-type(4) div{
+    display: flex;
+    flex-direction: column;
+} */
+
+main section:nth-of-type(2) h4,
+main section:nth-of-type(3) h4,
+main section:nth-of-type(4) h4{
+    font-family: var(--hoofd-font);
+    font-size: 25px;
+    grid-column-start: 1;
+}
+
+main section:nth-of-type(2) p,
+main section:nth-of-type(3) p,
+main section:nth-of-type(4) p{
+    grid-column-start: 1;
+}
+
+main section:nth-of-type(2) img,
+main section:nth-of-type(3) img,
+main section:nth-of-type(4) img{
+    width: 13cm;
+    grid-column-start: 2;
+}
+
+main section:nth-of-type(4) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    color: var(--hoofd-color-kunstsite);
+}
+
+main section:nth-of-type(4) nav a:hover{
+    border: 3px solid var(--hoofd-color-kunstsite);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-kunstsite);
+    padding: 5px 3px;
+}
+
+/* .kunstsite main nav{
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 10.6em;
+    background-image: linear-gradient(
+    var(----hoofd-color-kunstsite) 0,
+    var(--secondary-color-kunstsite) 1
+    );
+} */
+
+.kunstsite main nav ul{
+    list-style: none;
+    margin-bottom: 1.7em;
+
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.kunstsite main nav ul li a{
+    text-decoration: none;
+    padding: 2px 4px;
+    font-size: 25px;
+
+    font-family: var(--hoofd-font);
+    color: var(--hoofd-color-kunstsite);
+    border: solid 2px var(--hoofd-color-kunstsite);
+    background-color: var(--hover-font-color);
+}
+
+.kunstsite main nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-kunstsite);
+    background-color: var(--hoofd-color-kunstsite);
+    background-color: var(--hoofd-color-kunstsite);
+    color: var(--hover-font-color);
+    font-weight: bold;
+}
+
+    /* background circles */
+.kunstsitecircle{
+    background-color: var(--secondary-color-kunstsite);
+    position: absolute;
+    right: 15%;
+    top: 13%;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+            /* Simpele spel page  */
+
+.simpelespel header h1{
+    background-color: var(--hoofd-color-simpelespel);
+    text-indent: .4cm;
+}
+
+.simpelespel header nav ul li a{
+    color: var(--hoofd-color-simpelespel);
+
+}
+
+.simpelespel header nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-simpelespel);
+    font-weight: bold;
+}
+
+.simpelespel main section h2{
+    text-decoration: underline var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main section:nth-of-type(1) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main section:nth-of-type(1) nav a:hover{
+    border: 3px solid var(--hoofd-color-simpelespel);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-simpelespel);
+    padding: 5px 3px;
+}
+
+
+.simpelespel main section:nth-of-type(1) img{
+    width: 5cm;
+    position: absolute;
+    left: 19.9cm;
+}
+
+.simpelespelcircle{
+    background-color: var(--secondary-color-simpelespel);
+    position: absolute;
+    right: 15%;
+    top: 13%;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.simpelespel main h3{
+    font-family: var(--hoofd-font);
+    font-size: 30px;
+    margin-top: 8em;
+    text-decoration: underline black;
+}
+
+.simpelespel main section:nth-of-type(2) h4,
+.simpelespel main section:nth-of-type(3) h4,
+.simpelespel main section:nth-of-type(4) h4{
+    color: var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main section:nth-of-type(4) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main section:nth-of-type(4) nav a:hover{
+    border: 3px solid var(--hoofd-color-simpelespel);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-simpelespel);
+    padding: 5px 3px;
+}
+
+.simpelespel .spelimages{
+    width: 13cm;
+    height: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.simpelespel main nav ul{
+    list-style: none;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.simpelespel main nav ul li a{
+    text-decoration: none;
+    padding: 2px 4px;
+    font-family: var(--hoofd-font);
+    color: var(--hoofd-color-simpelespel);
+    border: solid 2px var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-simpelespel);
+    background-color: var(--hoofd-color-simpelespel);
+    color: var(--hover-font-color);
+    font-weight: bold;
+}
+
+            /* prototype page  */
+
+.prototype header h1{
+    font-size: 2.9cm;
+    letter-spacing: 4px;
+    background-color: var(--hoofd-color-prototype);
+    text-indent: .4cm;
+}
+
+.prototype header nav ul li a{
+    color: var(--hoofd-color-prototype);
+
+}
+
+.prototype header nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-prototype);
+    font-weight: bold;
+}
+
+.prototype main section h2{
+    text-decoration: underline var(--hoofd-color-prototype);
+}
+
+.prototype main section:nth-of-type(1) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--hoofd-color-prototype);
+}
+
+.prototype main section:nth-of-type(1) nav a:hover{
+    border: 3px solid var(--hoofd-color-prototype);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-prototype);
+    padding: 5px 3px;
+}
+
+
+.prototype main section:nth-of-type(1) img{
+    width: 6cm;
+    top: .6cm;
+    left: 19.5cm;
+}
+
+.prototypecircle{
+    background-color: var(--secondary-color-prototype);
+    position: absolute;
+    right: 15%;
+    top: 13%;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.prototype main h3{
+    font-family: var(--hoofd-font);
+    font-size: 30px;
+
+    margin-top: 5cm;
+    text-decoration: underline black;
+}
+
+.prototype main section:nth-of-type(2) h4,
+.prototype main section:nth-of-type(3) h4,
+.prototype main section:nth-of-type(4) h4{
+    color: var(--hoofd-color-prototype);
+}
+
+.prototype main section:nth-of-type(4) p em{
+    font-size: 14px;
+}
+
+
+
+.prototype main section:nth-of-type(4) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--hoofd-color-prototype);
+}
+
+.prototype main section:nth-of-type(4) nav a:hover{
+    border: 3px solid var(--hoofd-color-prototype);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-prototype);
+    padding: 5px 3px;
+}
+
+
+.prototype main nav ul{
+    list-style: none;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prototype main nav ul li a{
+    text-decoration: none;
+    padding: 2px 4px;
+    font-family: var(--hoofd-font);
+    color: var(--hoofd-color-prototype);
+    border: solid 2px var(--hoofd-color-prototype);
+}
+
+.prototype main nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-prototype);
+    background-color: var(--hoofd-color-prototype);
+    color: var(--hover-font-color);
+    font-weight: bold;
+}
+
+            /* ux design page  */
+
+.uxdesign header h1{
+    font-size: 3.5cm;
+    letter-spacing: 3px;
+    background-color: var(--hoofd-color-uxdesign);
+    text-indent: .4cm;
+}
+
+.uxdesign header nav ul li a{
+    color: var(--hoofd-color-uxdesign);
+
+}
+
+.uxdesign header nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-uxdesign);
+    font-weight: bold;
+}
+
+.uxdesign main section h2{
+    text-decoration: underline var(--hoofd-color-uxdesign);
+}
+
+.uxdesign main section:nth-of-type(1) nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--hoofd-color-uxdesign);
+}
+
+.uxdesign main section:nth-of-type(1) nav a:hover{
+    border: 3px solid var(--hoofd-color-uxdesign);
+    color: var(--hover-font-color);
+    background-color: var(--hoofd-color-uxdesign);
+    padding: 5px 3px;
+}
+
+
+.uxdesign main section:nth-of-type(1) img{
+    width: 9.5cm;
+    top: .025cm;
+    left: 17.7cm;
+}
+
+.uxdesigncircle{
+    background-color: var(--secondary-color-uxdesign);
+    position: absolute;
+    right: 15%;
+    top: 13%;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.uxdesign main h3{
+    font-family: var(--hoofd-font);
+    font-size: 30px;
+    color: var(--hoofd-color-uxdesign);
+    margin-top: 5cm;
+    text-decoration: underline black;
+}
+
+.uxdesign main section:nth-of-type(2) h4,
+.uxdesign main section:nth-of-type(3) h4,
+.uxdesign main section:nth-of-type(4) h4{
+    color: var(--hoofd-color-uxdesign);
+}
+
+.uxdesign main section:nth-of-type(4) p em{
+    font-size: 14px;
+}
+
+.uxdesign .uxdesignimages{
+    width: 13cm;
+    height: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+}
+
+.uxdesign main nav ul{
+    list-style: none;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.uxdesign main nav ul li a{
+    text-decoration: none;
+    padding: 2px 4px;
+    font-family: var(--hoofd-font);
+    color: var(--hoofd-color-uxdesign);
+    border: solid 2px var(--hoofd-color-uxdesign);
+}
+
+.uxdesign main nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-uxdesign);
+    background-color: var(--hoofd-color-uxdesign);
+    color: var(--hover-font-color);
+    font-weight: bold;
+}
+
+            /* about page  */
+
+.about h1{
+    background-color: var(--hoofd-color-about);
+    letter-spacing: .1cm;
+}
+
+    /* home Navigation menu */
+.about header nav ul li a{
+    color: var(--hoofd-color-about);
+
+}
+
+.about header nav ul li a:hover{
+    border: 2px solid var(--hoofd-color-about);
+    font-weight: bold;
+}
+
+    /* main vak */
+.about main section:nth-of-type(1) img{
+    position: absolute;
+    width: 8cm;
+    top: .7cm;
+    left: 19.3cm;
+}
+
+.about main h2{
+    text-decoration: underline var(--hoofd-color-about);
+}
+
+.about main nav ul li a{
+    font-family: var(--hoofd-font);
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--hoofd-color-about);
+}
+
+.about main nav ul li a:hover{
+    padding: 5px 20px;
+    border: 2px solid var(--hoofd-color-about);
+    background-color: var(--hoofd-color-about);
+    color: var(--hover-font-color);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
