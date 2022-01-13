@@ -1,0 +1,120 @@
+
+    /* ** about page ** */
+    /* =====================*/
+
+    /* header about page  */
+.about header h1{
+    background-color: var(--hoofd-color-about);
+}
+
+
+    /* Navigation menu */
+.about header nav{
+    background-color: var(--hoofd-color-about);
+}
+
+.about header nav button{
+    background-color: var(--hoofd-color-about);
+}
+
+
+
+    /* hoofd section about page  */
+.about main section h2{
+    text-decoration: underline var(--hoofd-color-about);
+}
+
+    
+
+    /*  main about page  */
+    /* ======================*/
+
+    /* background circles */
+.aboutcircles .circle1{
+    background-color: var(--secondary-color-about);
+    position: absolute;
+    z-index: -1;
+
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+
+    animation-name: flying;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-delay: -2s;
+}
+
+.aboutcircles .circle2{
+    background-color: var(--secondary-color-about);
+    position: absolute;
+    z-index: -1;
+
+    animation-name: flying2;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+.aboutcircles .circle3{
+    background-color: var(--secondary-color-about);
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    z-index: -1;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.aboutcircles .circle3 img{
+    width: 20em;
+
+    position: absolute;
+    right: 16%;
+    top: 10%;
+}
+
+.aboutcircles .circle4{
+    background-color: var(--secondary-color-about);
+    position: absolute;
+    left: 15%;
+    top: 45%;
+    z-index: -1;
+
+    animation-name: flying4;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+
+
+    /* main info */
+.about main section:nth-of-type(n+2) h4{
+    color: var(--hoofd-color-about);
+}
+
+.about main section:nth-of-type(n+2){
+    display: grid;
+    grid-template-columns: 13% 1fr 1fr 13%;
+    grid-template-rows: 6em auto;
+}
+
+.about main section:nth-of-type(n+3){
+    display: grid;
+    grid-template-rows: 2em auto;
+}

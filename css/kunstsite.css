@@ -1,0 +1,229 @@
+
+        /* ====================================*/
+        /* ==  WORKS pages algemene stijlen  ==*/
+        /* ====================================*/
+
+    /* ** kunstsite page ** */
+    /* =====================*/
+
+/* header kunstsite page  */
+.kunstsite header h1{
+    letter-spacing: -5px;
+    background-color: var(--hoofd-color-kunstsite);
+}
+
+
+    /* Navigation menu */
+.kunstsite header nav{
+    background-color: var(--hoofd-color-kunstsite);
+}
+
+.kunstsite header nav button{
+    background-color: var(--hoofd-color-kunstsite);
+}
+
+
+
+    /* hoofd section kunstsite page  */
+.kunstsite main section h2{
+    text-decoration: underline var(--hoofd-color-kunstsite);
+}
+
+.kunstsite main section:nth-of-type(1) img{
+    position: absolute;
+    left: 18.7cm;
+    top: 1.2cm;
+}
+.kunstsite main section:nth-of-type(1) nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+main section nav a{
+    font-family: var(--hoofd-font);
+    font-size: 20px;
+    color: var(--hoofd-color-kunstsite);
+    text-decoration: none;
+    text-decoration-color: var(--secondary-color-kunstsite);
+
+    position: relative;
+}
+
+main section nav a::before{
+    content: "";
+    width: 100%;
+    height: .2em;
+
+    background-color: var(--hoofd-color-kunstsite);
+
+    position: absolute;
+    bottom: -.5em;
+    margin-top: .5em;
+
+    transform:scalex(0);
+    transition: .6s;
+}
+
+main section nav a:hover::before{
+    transform:scalex(1);
+}
+
+main h3{
+    font-family: var(--hoofd-font);
+    color: var(--basis-font-color);
+    font-size: 30px;
+    position: relative;
+    left: 15%;
+    margin-top: 5em;
+    margin-bottom: 0;
+    text-decoration: underline var(--basis-font-color);
+}
+
+    /*  main kunstsite page  */
+    /* ======================*/
+
+    /* background circles */
+.kunstsitecircle{
+    background-color: var(--secondary-color-kunstsite);
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    z-index: -1;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.kunstsitecircle img{
+    width: 17em;
+
+    position: absolute;
+    right: 22%;
+    top: 25%;
+}
+
+    /* main info */
+main section:nth-of-type(n+2){
+    display: grid;
+    grid-template-columns: 13% 1fr 1fr 5%;
+    grid-template-rows: 2em auto;
+}
+
+.kunstsite main section:nth-of-type(n+3){
+    display: grid;
+    grid-template-rows: 2em auto;
+}
+
+.kunstsite main section:last-of-type{
+margin-bottom: 8em;
+}
+
+.kunstsite main section:nth-of-type(n+2) h4{
+    color: var(--hoofd-color-kunstsite);
+    margin: 0;
+
+    font-family: var(--hoofd-font);
+    font-size: 1.5em;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+.kunstsite main section:nth-of-type(n+2) p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+.kunstsite main section:nth-of-type(n+2) img{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+
+    width: 100%;
+}
+
+.kunstsite main section:nth-of-type(n+2) nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+
+main>nav{
+    height: 3em;
+    width: 80%;
+
+    position: fixed;
+    right: 0;
+    bottom: 3em;
+
+    background-color: var(--hoofd-color-kunstsite);
+
+    transform: translateX(100%);
+    transition:0.5s; 
+}
+
+main>nav.toonWorksmenu{
+    transform: translateX(0%);
+}
+
+main>nav button{
+    font-size: .65em;
+    font-weight: bold;
+
+    writing-mode: vertical-lr;
+    transform: rotate(-.25turn);
+
+    position: absolute;
+    left: -3.2em;
+    bottom: 1.35em;
+    margin: 0;
+    padding: .4em;
+
+    cursor: pointer;
+
+    background-color: var(--hoofd-color-kunstsite);
+    border:none;
+}
+
+main>nav button:hover{
+    color: var(--hover-font-color);
+}
+
+main>nav ul{
+    margin: 0;
+    padding: 1em 0 ;
+    height: 100%;
+
+    display: flex; 
+    flex-flow: row;
+    justify-content: space-around;
+
+}
+
+main>nav ul li{
+    list-style: none;
+    outline: none;
+}
+
+main>nav ul li a{
+    font-family: var(--hoofd-font) ;
+    text-decoration: none;
+    color: var(--hover-font-color);
+    text-transform: capitalize;
+}
+
+main>nav ul li:focus,
+main>nav ul li:hover{
+    text-decoration: underline overline;
+}

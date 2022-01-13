@@ -1,0 +1,161 @@
+
+    /* ** simpelespel page ** */
+    /* =======================*/
+
+/* header simpelespel page  */
+.simpelespel header h1{
+    background-color: var(--hoofd-color-simpelespel);
+    text-indent: .4cm;
+}
+
+
+    /* Navigation menu */
+.simpelespel header nav{
+    background-color: var(--hoofd-color-simpelespel);
+}
+
+.simpelespel header nav button{
+    background-color: var(--hoofd-color-simpelespel);
+}
+
+
+
+    /* hoofd section simpelespel page  */
+.simpelespel main section h2{
+    text-decoration: underline var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main section:nth-of-type(1) img{
+    position: absolute;
+    left: 18.7cm;
+    top: 1.2cm;
+}
+.simpelespel main section:nth-of-type(1) nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+.simpelespel main section nav a{
+    color: var(--hoofd-color-simpelespel);
+    text-decoration-color: var(--secondary-color-simpelespel);
+}
+
+.simpelespel main section nav a::before{
+    background-color: var(--hoofd-color-simpelespel);
+}
+
+
+
+    /*  main simpelespel page  */
+    /* ======================*/
+
+    /* background circles */
+.simpelespelcircle{
+    background-color: var(--secondary-color-simpelespel);
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    z-index: -1;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.simpelespelcircle img{
+    width: 12em;
+
+    position: absolute;
+    right: 32%;
+    top: 7%;
+}
+
+
+    /* main info */
+.simpelespel main section:nth-of-type(n+2) h4{
+    color: var(--hoofd-color-simpelespel);
+    margin: 0;
+
+    font-family: var(--hoofd-font);
+    font-size: 1.5em;
+}
+
+.simpelespel main section:nth-of-type(n+3){
+    display: grid;
+    grid-template-rows: 2em auto;
+}
+
+.simpelespel main section:last-of-type{
+margin-bottom: 8em;
+}
+
+.simpelespel main section:nth-of-type(n+2) h4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+.simpelespel main section:nth-of-type(n+2) p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+.simpelespel main section:nth-of-type(n+2) img{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+
+    width: 100%;
+}
+
+.simpelespel main section:nth-of-type(n+2) nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+
+.scrollimages{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior:none;
+    gap:10px;
+}
+
+.scrollimages img{
+    scroll-snap-align: center;
+}
+
+.simpelespel main section:nth-of-type(2) div{
+    height: 85%;
+}
+
+
+
+    /* works nav*/
+
+.simpelespel main>nav{
+    background-color: var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main>nav button{
+    background-color: var(--hoofd-color-simpelespel);
+}
+
+.simpelespel main>nav button:hover{
+    color: var(--hover-font-color);
+}
+
