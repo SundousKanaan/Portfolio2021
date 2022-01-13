@@ -1,11 +1,19 @@
 
+/* mode checkbox */
+var cheakBox = document.getElementById('colorsmode');
 
+function switchMode( ){
+    console.log("cheacked");
+    document.body.classList.toggle("lightmode");
+}
+
+cheakBox.addEventListener("click", switchMode);
+
+// ====================================================
+// ====================================================
 
 var navigtieknop = document.querySelector("header nav button");
 var navigtielist = document.querySelector("header nav");
-var worksknop = document.querySelector("main>nav button");
-var workslist = document.querySelector("main>nav");
-
 
 function openNavmenu(){
     console.log("click");
@@ -14,9 +22,17 @@ function openNavmenu(){
 
 navigtieknop.addEventListener("click", openNavmenu);
 
+
+// Works nav 
+var worksKnop = document.querySelector("main>nav button");
+var workslist = document.querySelector("main>nav");
+
 function openWorksmenu(){
     console.log("click");
     workslist.classList.toggle("toonWorksmenu");
 }
 
-worksknop.addEventListener("click", openWorksmenu);
+worksKnop.addEventListener("click", openWorksmenu);
+
+
+
