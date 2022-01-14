@@ -149,5 +149,5 @@
 }
 
 .works main nav ul li a:hover + img{
-    box-shadow: 0 0 1em var(--hoofd-color-works);
+    box-shadow: 0em 0em 1em var(--hoofd-color-works);
 }
