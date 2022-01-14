@@ -1,10 +1,12 @@
 
 /* mode checkbox */
 var cheakBox = document.getElementById('colorsmode');
+var Body=document.body;
 
 function switchMode( ){
     console.log("cheacked");
-    document.body.classList.toggle("lightmode");
+    // document.body.classList.toggle("lightmode");
+    Body.classList.toggle("lightmode")
 }
 
 cheakBox.addEventListener("click", switchMode);
