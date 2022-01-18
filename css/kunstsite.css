@@ -74,7 +74,7 @@ main h3{
     color: var(--basis-font-color);
     font-size: 30px;
     position: relative;
-    left: 15%;
+    padding-left: 15%;
     margin-top: 5em;
     margin-bottom: 0;
     text-decoration: underline var(--basis-font-color);
