@@ -4,7 +4,7 @@ var checkbox = document.getElementById('colorsmode');
 var Body=document.body;
 
 function switchMode( ){
-    console.log("cheacked");
+    console.log("checked");
     // document.body.classList.toggle("lightmode");
     Body.classList.toggle("lightmode")
 }
