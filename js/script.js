@@ -6,7 +6,7 @@ var Body=document.body;
 function switchMode( ){
     console.log("checked");
     // document.body.classList.toggle("lightmode");
-    Body.classList.toggle("lightmode")
+    Body.classList.toggle("lightmode");
 }
 
 checkbox.addEventListener("click", switchMode);
