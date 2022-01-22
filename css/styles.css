@@ -48,14 +48,13 @@
     --secondary-color-about: rgba(128, 128, 128, 0.3);
 } 
 
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: dark){
     :root{
-    --hover-font-color: white;
-    --basis-font-color: black;
+    --hover-font-color: black;
+    --basis-font-color: white;
 
-    --background-color: white;
+    --background-color: rgb(32, 32,32);
     }
-
 }
 
 
@@ -388,7 +387,7 @@ header nav ul li:hover{
     /* =====================*/
 
     /* mode checkbox */
-header label{
+/* header label{
     position: fixed;
     right: .8em;
     top: .3em;
@@ -396,15 +395,15 @@ header label{
     display: inline-block;
     width:1.5em;
     height: 3em;
-}
+} */
 
-header label input {
+/* header label input {
     opacity: 0;
     width: 0;
     height: 0;
-}
+} */
 
-header label span {
+/* header label span {
     position: absolute;
     top: 0;
     left: 0;
@@ -415,8 +414,8 @@ header label span {
     transition: .4s;
 
     border-radius: 2em;
-}
-
+} */
+/* 
 header label span::before {
     position: absolute;
     content: "🌒";
@@ -425,22 +424,46 @@ header label span::before {
 
     cursor: pointer;
     transition: .5s;
+} */
+
+#mode{
+    width: 5em;
+    height: 1.9em;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-size: .8em;
+    font-weight: bold;
+    color: var(--hover-font-color);
+
+    position: fixed;
+    right: 8.5em;
+    top: 0em;
+
+    background-color: var(--basis-font-color);
+    cursor: pointer;
 }
 
-body.lightmode header label span::before{
+/* 
+body.darkMode header label span::before{
     position: absolute;
     content: "🌔";
     transform: translateY(1.3em);
+} */
+
+body.darkMode{
+    --hover-font-color: black;
+    --basis-font-color: white;
+
+    --background-color: rgb(32, 32,32);
 }
 
-body.lightmode{
-    --hover-font-color: white;
-    --basis-font-color: black;
-
-    --background-color: white;
+body.darkMode #mode{
+    color: var(--hover-font-color);
+    background-color: var(--basis-font-color);
 }
-
-
     /* main sections  */
 main section{
     display: grid;
