@@ -1,3 +1,17 @@
+// works nav 
+var worksKnop = document.querySelector("main>nav button");
+var workslist = document.querySelector("main>nav");
+
+function openWorkmenu(){
+    console.log("clicked");
+    workslist.classList.toggle("toonworksmenu");
+}
+ 
+worksKnop.addEventListener('click', openWorkmenu);
+
+// ====================================================
+// ====================================================
+
 // OBSERVER
 //haal de elementen op die je wilt laten animeren, in dit geval de items met de 'animate' class
 const allAnimationItems = document.querySelectorAll(' main section:nth-of-type(n+2)')
