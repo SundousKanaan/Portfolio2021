@@ -3,48 +3,57 @@
         /* =====================*/
 
 /* header ux design page  */
-.uxdesign header h1{
+.gbook header h1{
     font-size: 8em;
     letter-spacing: -2px;
     padding-right: .3em;
-    background-color: var(--hoofd-color-uxdesign);
+    background-color: var(--hoofd-color-gbook);
 }
 
 
     /* Navigation menu */
-.uxdesign header nav{
-    background-color: var(--hoofd-color-uxdesign);
+.gbook header nav{
+    background-color: var(--hoofd-color-gbook);
 }
 
-.uxdesign header nav button{
-    background-color: var(--secondary-color-uxdesign);
+.gbook header nav button{
+    color:  var(--basis-font-color);
+    background-color: var(--secondary-color-gbook);
+}
+
+.gbook header nav button:hover{
+    color: var(--hover-font-color);
+}
+
+.gbook main>nav ul li:focus,
+.gbook main>nav ul li:hover{
+    text-decoration: underline overline;
 }
 
 
-
-    /* hoofd section ux design page  */
-.uxdesign main section h2{
-    text-decoration: underline var(--hoofd-color-uxdesign);
+    /* hoofd section G-BOOK page  */
+.gbook main section h2{
+    text-decoration: underline var(--hoofd-color-gbook);
 }
 
-.uxdesign main section:nth-of-type(1) img{
+.gbook main section:nth-of-type(1) img{
     position: absolute;
     left: 18.7cm;
     top: 1.2cm;
 }
-.uxdesign main section:nth-of-type(1) nav{
+.gbook main section:nth-of-type(1) nav{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
 }
 
 
-    /*  main ux design page  */
+    /*  main G-BOOK page  */
     /* ======================*/
 
     /* background circles */
-.uxdesigncircle{
-    background-color: var(--secondary-color-uxdesign);
+.gbookcircle{
+    background-color: var(--secondary-color-gbook);
     position: absolute;
     right: 7%;
     top: 13%;
@@ -61,7 +70,7 @@
     animation-duration: 2s;
 }
 
-.uxdesigncircle img{
+.gbookcircle img{
     width: 22em;
 
     position: absolute;
@@ -71,36 +80,45 @@
 
 
     /* main info */
-.uxdesign main section:nth-of-type(n+2) h4{
-    color: var(--hoofd-color-uxdesign);
+
+.gbook main section nav a{
+        color: var(--hoofd-color-gbook);
+}
+
+.gbook main section nav a::before{
+    background-color: var(--hoofd-color-gbook);
+}
+
+.gbook main section:nth-of-type(n+2) h4{
+    color: var(--hoofd-color-gbook);
     margin: 0;
 
     font-family: var(--hoofd-font);
     font-size: 1.5em;
 }
 
-.uxdesign main section:nth-of-type(n+3){
+.gbook main section:nth-of-type(n+3){
     display: grid;
     grid-template-rows: 2em auto;
 }
 
-.uxdesign main section:last-of-type{
+.gbook main section:last-of-type{
 margin-bottom: 8em;
 }
 
-.uxdesign main section:nth-of-type(n+2) h4{
+.gbook main section:nth-of-type(n+2) h4{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
 }
 
-.uxdesign main section:nth-of-type(n+2) p{
+.gbook main section:nth-of-type(n+2) p{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
 }
 
-.uxdesign main section:nth-of-type(n+2) img{
+.gbook main section:nth-of-type(n+2) img{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -108,7 +126,7 @@ margin-bottom: 8em;
     width: 100%;
 }
 
-.uxdesign main section:nth-of-type(n+2) nav{
+.gbook main section:nth-of-type(n+2) nav{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
@@ -131,17 +149,12 @@ margin-bottom: 8em;
 }
 
 
-
     /* works nav*/
-.uxdesign main>nav{
-    background-color: var(--hoofd-color-uxdesign);
+.gbook main>nav{
+    background-color: var(--hoofd-color-gbook);
 }
 
-.uxdesign main>nav button{
-    /* BOX STYLING */
-    background-color: var(--hoofd-color-uxdesign);
+.gbook main>nav button{
+    background-color: var(--hoofd-color-gbook);
 }
-
-
-
 

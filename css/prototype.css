@@ -17,7 +17,7 @@
 }
 
 .prototype header nav button{
-    background-color: var(--hoofd-color-prototype);
+    background-color: var(--secondary-color-prototype);
 }
 
 
@@ -138,7 +138,6 @@ margin-bottom: 8em;
 }
 
     /* works nav*/
-
 .prototype main>nav{
     background-color: var(--hoofd-color-prototype);
 }

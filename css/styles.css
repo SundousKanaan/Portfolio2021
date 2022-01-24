@@ -4,11 +4,11 @@
 :root{
     /* font */
     --hoofd-font: Arial, Helvetica, sans-serif ;
-    --hover-font-color: black;
-    --basis-font-color: white;
+    --hover-font-color: white;
+    --basis-font-color: rgb(32, 32,32);
 
     /* background */
-    --background-color: rgb(32, 32,32);
+    --background-color: white;
 
 
     /* home page */
@@ -18,6 +18,10 @@
     /* works page  */
     --hoofd-color-works: rgb(255, 178, 102);
     --secondary-color-works: rgb(255, 222, 161, 0.3);
+
+    /* gbook page  */
+    --hoofd-color-gbook: rgb(178,102,255);
+    --secondary-color-gbook: rgb(204,153,255, 0.3);
 
     /* kunstsite page  */
     --hoofd-color-kunstsite: rgba(255, 102, 178);
@@ -50,7 +54,7 @@
 
 @media (prefers-color-scheme: dark){
     :root{
-    --hover-font-color: black;
+    --hover-font-color: rgb(32, 32,32);
     --basis-font-color: white;
 
     --background-color: rgb(32, 32,32);
@@ -301,7 +305,7 @@ header h1{
 }
 
     /* ================*/
-    /* Navigation menu */
+    /* Navigatie menu */
     /* ================*/
 
 header nav{
@@ -333,13 +337,16 @@ header nav button{
 
     cursor: pointer;
 
-    background-color: var(--hoofd-color-home);
+    background-color: var(--secondary-color-home);
     border:none;
 }
 
 header nav button:hover{
     color: var(--hover-font-color);
-    background-color: var(--hoofd-color-home);
+}
+
+header nav:hover{
+    transform: translateY(-98%);
 }
 
 header nav ul{
@@ -386,49 +393,10 @@ header nav ul li:hover{
     /* === main stijlen  ===*/
     /* =====================*/
 
-    /* mode checkbox */
-/* header label{
-    position: fixed;
-    right: .8em;
-    top: .3em;
-
-    display: inline-block;
-    width:1.5em;
-    height: 3em;
-} */
-
-/* header label input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-} */
-
-/* header label span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-color: var(--basis-font-color);
-    transition: .4s;
-
-    border-radius: 2em;
-} */
-/* 
-header label span::before {
-    position: absolute;
-    content: "🌒";
-    left: .06em;
-    top: .1em;
-
-    cursor: pointer;
-    transition: .5s;
-} */
-
-#mode{
+    /* Modeknop */
+#modeknop{
     width: 5em;
-    height: 1.9em;
+    height: 1.75em;
 
     margin: 0;
     padding: 0;
@@ -442,28 +410,37 @@ header label span::before {
     right: 8.5em;
     top: 0em;
 
+    z-index: 100;
+
     background-color: var(--basis-font-color);
     cursor: pointer;
 }
 
-/* 
-body.darkMode header label span::before{
-    position: absolute;
-    content: "🌔";
-    transform: translateY(1.3em);
-} */
-
 body.darkMode{
-    --hover-font-color: black;
+    --hover-font-color: rgb(32, 32,32);
     --basis-font-color: white;
 
     --background-color: rgb(32, 32,32);
 }
 
-body.darkMode #mode{
+body.darkMode #modeknop{
     color: var(--hover-font-color);
     background-color: var(--basis-font-color);
 }
+
+#modeknop:hover{
+    box-shadow: rgb(80, 80, 80) 0 0 .5em .1em;
+}
+
+body.darkMode #modeknop:active,
+#modeknop:active{
+    font-weight: lighter;
+}
+
+body.darkMode #modeknop:hover{
+    box-shadow: rgb(233, 233, 233) 0 0 .5em .1em ;
+}
+
     /* main sections  */
 main section{
     display: grid;
