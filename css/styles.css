@@ -50,15 +50,6 @@
     /* about page */
     --hoofd-color-about: rgba(128,128,128);
     --secondary-color-about: rgba(128, 128, 128, 0.3);
-} 
-
-@media (prefers-color-scheme: dark){
-    :root{
-    --hover-font-color: rgb(32, 32,32);
-    --basis-font-color: white;
-
-    --background-color: rgb(32, 32,32);
-    }
 }
 
 
