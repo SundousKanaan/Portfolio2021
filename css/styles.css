@@ -1,6 +1,10 @@
         /*=====================*/
         /*= custom properties =*/
         /*=====================*/
+html{
+	overflow:hidden;
+}
+
 :root{
     /* font */
     --hoofd-font: Arial, Helvetica, sans-serif ;
